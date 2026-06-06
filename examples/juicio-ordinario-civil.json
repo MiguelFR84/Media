@@ -1,0 +1,160 @@
+{
+  "id": "juicio-ordinario-civil",
+  "jurisdiction": "Spain",
+  "procedureName": "Juicio ordinario civil",
+  "legalBasis": [
+    "Ley de Enjuiciamiento Civil 1/2000"
+  ],
+  "disclaimer": "Educational and automation-oriented structure. Not legal advice.",
+  "phases": [
+    {
+      "id": "alegaciones",
+      "title": "Fase de alegaciones",
+      "order": 1,
+      "objective": "Define claims, facts, legal grounds and procedural positions of the parties.",
+      "steps": [
+        {
+          "id": "demanda",
+          "title": "Demanda",
+          "outputs": ["hechos", "fundamentos juridicos", "petitum", "documentos", "dictamenes"]
+        },
+        {
+          "id": "admision",
+          "title": "Admision a tramite"
+        },
+        {
+          "id": "emplazamiento",
+          "title": "Emplazamiento",
+          "deadline": "20 dias habiles"
+        },
+        {
+          "id": "contestacion",
+          "title": "Contestacion",
+          "children": [
+            {
+              "id": "allanamiento",
+              "title": "Allanamiento"
+            },
+            {
+              "id": "oposicion",
+              "title": "Oposicion"
+            },
+            {
+              "id": "reconvencion",
+              "title": "Reconvencion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audiencia-previa",
+      "title": "Audiencia previa",
+      "order": 2,
+      "objective": "Depurar cuestiones procesales, fijar controversia y admitir prueba.",
+      "steps": [
+        {
+          "id": "conciliacion",
+          "title": "Intento de conciliacion"
+        },
+        {
+          "id": "examen-procesal",
+          "title": "Examen procesal"
+        },
+        {
+          "id": "hechos-controvertidos",
+          "title": "Fijacion de hechos controvertidos"
+        },
+        {
+          "id": "prueba",
+          "title": "Proposicion y admision de prueba"
+        }
+      ]
+    },
+    {
+      "id": "juicio-oral",
+      "title": "Juicio oral",
+      "order": 3,
+      "objective": "Practice admitted evidence and present oral conclusions.",
+      "steps": [
+        {
+          "id": "practica-prueba",
+          "title": "Practica de prueba admitida",
+          "children": [
+            {
+              "id": "interrogatorio-partes",
+              "title": "Interrogatorio de partes"
+            },
+            {
+              "id": "testifical",
+              "title": "Testifical"
+            },
+            {
+              "id": "pericial",
+              "title": "Pericial"
+            },
+            {
+              "id": "documental",
+              "title": "Documental"
+            }
+          ]
+        },
+        {
+          "id": "conclusiones",
+          "title": "Conclusiones orales"
+        }
+      ]
+    },
+    {
+      "id": "sentencia",
+      "title": "Sentencia",
+      "order": 4,
+      "steps": [
+        {
+          "id": "redaccion",
+          "title": "Redaccion de sentencia",
+          "deadline": "20 dias"
+        },
+        {
+          "id": "notificacion",
+          "title": "Notificacion"
+        }
+      ]
+    },
+    {
+      "id": "recursos",
+      "title": "Recursos",
+      "order": 5,
+      "steps": [
+        {
+          "id": "apelacion",
+          "title": "Apelacion",
+          "deadline": "20 dias"
+        },
+        {
+          "id": "casacion",
+          "title": "Casacion / extraordinario por infraccion procesal"
+        }
+      ]
+    },
+    {
+      "id": "ejecucion",
+      "title": "Ejecucion",
+      "order": 6,
+      "steps": [
+        {
+          "id": "titulo-ejecutivo",
+          "title": "Titulo ejecutivo"
+        },
+        {
+          "id": "despacho-ejecucion",
+          "title": "Despacho de ejecucion"
+        },
+        {
+          "id": "embargos-apremios",
+          "title": "Embargos / apremios"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: Spanish Legal Procedure Automation
+message: If you use this project in research or public legal-tech work, please cite the repository.
+type: software
+authors:
+  - family-names: FR84
+    given-names: Miguel
+repository-code: https://github.com/MiguelFR84/spanish-legal-procedure-automation
+license: MIT
+version: 0.1.0
+date-released: 2026-06-06

@@ -1,1 +1,36 @@
-{"dependencies": {}}
+{
+  "name": "spanish-legal-procedure-automation",
+  "version": "0.1.0",
+  "description": "Open-source schemas, examples and automation workflows for Spanish legal procedure and legal-tech tooling.",
+  "private": false,
+  "type": "commonjs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelFR84/spanish-legal-procedure-automation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MiguelFR84/spanish-legal-procedure-automation/issues"
+  },
+  "homepage": "https://github.com/MiguelFR84/spanish-legal-procedure-automation#readme",
+  "keywords": [
+    "legaltech",
+    "spain",
+    "civil-procedure",
+    "legal-automation",
+    "workflow",
+    "schema",
+    "ai"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate_examples.js",
+    "test": "npm run validate",
+    "video": "node make_video.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

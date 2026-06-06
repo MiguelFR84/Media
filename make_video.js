@@ -1,11 +1,11 @@
-// Generates juicio-ordinario-civil.mp4 using Playwright + browser MediaRecorder
-// Usage: NODE_PATH=/opt/node22/lib/node_modules node make_video.js
+// Generates juicio-ordinario-civil.mp4 using Playwright + browser MediaRecorder.
+// Usage: npm run video
 
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
-const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+const CHROME = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE || process.env.CHROME || process.env.CHROMIUM_PATH || '';
 const OUTPUT = path.join(__dirname, 'juicio-ordinario-civil.mp4');
 const W = 1280, H = 720;
 
@@ -307,10 +307,13 @@ interval=setInterval(()=>{
   const duration = (total / FPS).toFixed(1);
   console.log(`Generating ${duration}s video (${total} frames @ ${FPS}fps)…`);
 
-  const browser = await chromium.launch({
-    executablePath: CHROME,
+  const launchOptions = {
     args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
+  };
+  if (CHROME) {
+    launchOptions.executablePath = CHROME;
+  }
+  const browser = await chromium.launch(launchOptions);
 
   const page = await browser.newPage({ viewport: { width: W, height: H } });
   await page.setContent(pageHTML, { waitUntil: 'domcontentloaded' });
